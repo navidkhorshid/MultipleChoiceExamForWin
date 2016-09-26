@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuizDB" Class="DBLINQDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=PC\SQLSERVER;Initial Catalog=QuizDB;Integrated Security=True" SettingsObjectName="MultipleChoiceQuiz.Properties.Settings" SettingsPropertyName="QuizDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.QUESTION" Member="QUESTIONs">
+    <Type Name="QUESTION">
+      <Column Name="Q_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Q_TEXT" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="Q_A" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Q_B" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Q_C" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Q_D" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Q_ANSWER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="QUESTION_QUIZ_QUESTION" Member="QUIZ_QUESTIONs" ThisKey="Q_ID" OtherKey="Q_ID" Type="QUIZ_QUESTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QUIZ" Member="QUIZs">
+    <Type Name="QUIZ">
+      <Column Name="QZ_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="QZ_TITLE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Association Name="QUIZ_QUIZ_QUESTION" Member="QUIZ_QUESTIONs" ThisKey="QZ_ID" OtherKey="QZ_ID" Type="QUIZ_QUESTION" />
+      <Association Name="QUIZ_QUIZ_USER" Member="QUIZ_USERs" ThisKey="QZ_ID" OtherKey="QZ_ID" Type="QUIZ_USER" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QUIZ_QUESTION" Member="QUIZ_QUESTIONs">
+    <Type Name="QUIZ_QUESTION">
+      <Column Name="QQ_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="QZ_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Q_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="QUESTION_QUIZ_QUESTION" Member="QUESTION" ThisKey="Q_ID" OtherKey="Q_ID" Type="QUESTION" IsForeignKey="true" />
+      <Association Name="QUIZ_QUIZ_QUESTION" Member="QUIZ" ThisKey="QZ_ID" OtherKey="QZ_ID" Type="QUIZ" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QUIZ_USER" Member="QUIZ_USERs">
+    <Type Name="QUIZ_USER">
+      <Column Name="QU_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="QZ_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="U_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QU_CORRECT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QU_WRONG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QU_NOTSOLVED" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QU_SCORE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QU_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="QUIZ_QUIZ_USER" Member="QUIZ" ThisKey="QZ_ID" OtherKey="QZ_ID" Type="QUIZ" IsForeignKey="true" />
+      <Association Name="USER_QUIZ_USER" Member="USER" ThisKey="U_ID" OtherKey="U_ID" Type="USER" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[USER]" Member="USERs">
+    <Type Name="USER">
+      <Column Name="U_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="U_FNAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="U_LNAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="U_UN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="U_PASS" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="USER_QUIZ_USER" Member="QUIZ_USERs" ThisKey="U_ID" OtherKey="U_ID" Type="QUIZ_USER" />
+    </Type>
+  </Table>
+</Database>

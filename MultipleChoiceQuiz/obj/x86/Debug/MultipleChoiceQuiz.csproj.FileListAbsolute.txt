@@ -1,0 +1,28 @@
+C:\Users\user\Documents\Visual Studio 2010\Projects\MultipleChoiceQuiz\MultipleChoiceQuiz\bin\Debug\MultipleChoiceQuiz.exe.config
+C:\Users\user\Documents\Visual Studio 2010\Projects\MultipleChoiceQuiz\MultipleChoiceQuiz\bin\Debug\MultipleChoiceQuiz.exe
+C:\Users\user\Documents\Visual Studio 2010\Projects\MultipleChoiceQuiz\MultipleChoiceQuiz\bin\Debug\MultipleChoiceQuiz.pdb
+C:\Users\user\Documents\Visual Studio 2010\Projects\MultipleChoiceQuiz\MultipleChoiceQuiz\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2010\Projects\MultipleChoiceQuiz\MultipleChoiceQuiz\obj\x86\Debug\MultipleChoiceQuiz.Properties.Resources.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\MultipleChoiceQuiz\MultipleChoiceQuiz\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Users\user\Documents\Visual Studio 2010\Projects\MultipleChoiceQuiz\MultipleChoiceQuiz\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+C:\Users\user\Documents\Visual Studio 2010\Projects\MultipleChoiceQuiz\MultipleChoiceQuiz\obj\x86\Debug\MultipleChoiceQuiz.exe
+C:\Users\user\Documents\Visual Studio 2010\Projects\MultipleChoiceQuiz\MultipleChoiceQuiz\obj\x86\Debug\MultipleChoiceQuiz.pdb
+C:\Users\user\Documents\Visual Studio 2010\Projects\MultipleChoiceQuiz\MultipleChoiceQuiz\obj\x86\Debug\MultipleChoiceQuiz.Login.resources
+C:\Users\user\documents\visual studio 2010\Projects\MultipleChoiceQuiz\MultipleChoiceQuiz\obj\x86\Debug\MultipleChoiceQuiz.Administrator.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\MultipleChoiceQuiz\MultipleChoiceQuiz\obj\x86\Debug\MultipleChoiceQuiz.Student.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\MultipleChoiceQuiz\MultipleChoiceQuiz\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\user\Documents\Visual Studio 2010\Projects\MultipleChoiceQuiz\MultipleChoiceQuiz\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\user\Desktop\BST\MultipleChoiceQuiz\MultipleChoiceQuiz\bin\Debug\MultipleChoiceQuiz.exe.config
+C:\Users\user\Desktop\BST\MultipleChoiceQuiz\MultipleChoiceQuiz\obj\x86\Debug\MultipleChoiceQuiz.exe
+C:\Users\user\Desktop\BST\MultipleChoiceQuiz\MultipleChoiceQuiz\obj\x86\Debug\MultipleChoiceQuiz.pdb
+C:\Users\user\Desktop\BST\MultipleChoiceQuiz\MultipleChoiceQuiz\bin\Debug\MultipleChoiceQuiz.exe
+C:\Users\user\Desktop\BST\MultipleChoiceQuiz\MultipleChoiceQuiz\bin\Debug\MultipleChoiceQuiz.pdb
+C:\Users\user\Desktop\BST\MultipleChoiceQuiz\MultipleChoiceQuiz\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\user\Desktop\BST\MultipleChoiceQuiz\MultipleChoiceQuiz\obj\x86\Debug\MultipleChoiceQuiz.Administrator.resources
+C:\Users\user\Desktop\BST\MultipleChoiceQuiz\MultipleChoiceQuiz\obj\x86\Debug\MultipleChoiceQuiz.Student.resources
+C:\Users\user\Desktop\BST\MultipleChoiceQuiz\MultipleChoiceQuiz\obj\x86\Debug\MultipleChoiceQuiz.Login.resources
+C:\Users\user\Desktop\BST\MultipleChoiceQuiz\MultipleChoiceQuiz\obj\x86\Debug\MultipleChoiceQuiz.Properties.Resources.resources
+C:\Users\user\Desktop\BST\MultipleChoiceQuiz\MultipleChoiceQuiz\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Users\user\Desktop\BST\MultipleChoiceQuiz\MultipleChoiceQuiz\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\user\Desktop\BST\MultipleChoiceQuiz\MultipleChoiceQuiz\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+C:\Users\user\Desktop\BST\MultipleChoiceQuiz\MultipleChoiceQuiz\obj\x86\Debug\GenerateResource.write.1.tlog

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DBLINQ">
+  <DataContextMoniker Name="/DBLINQDataContext" />
+  <nestedChildShapes>
+    <classShape Id="f6bc74d3-9251-4990-934e-ae9e1abc36af" absoluteBounds="0.875, 0.5, 2, 1.9178898111979166">
+      <DataClassMoniker Name="/DBLINQDataContext/QUESTION" />
+      <nestedChildShapes>
+        <elementListCompartment Id="41473249-f495-4eac-9816-d374d4425b4e" absoluteBounds="0.89, 0.96, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e52605b8-9090-4c77-846b-9a94a29b873f" absoluteBounds="0.875, 4.25, 2, 1.0961531575520833">
+      <DataClassMoniker Name="/DBLINQDataContext/QUIZ" />
+      <nestedChildShapes>
+        <elementListCompartment Id="66ff67d7-1038-46b9-a32a-19cad9ec63b5" absoluteBounds="0.89, 4.71, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="992ccff5-ad0c-4c32-bde1-2e8f6b8a8b45" absoluteBounds="0.875, 2.625, 2, 1.26050048828125">
+      <DataClassMoniker Name="/DBLINQDataContext/QUIZ_QUESTION" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8cc20229-bb71-4f8c-a6df-b2ed3544735d" absoluteBounds="0.89, 3.085, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.875 : 2.41788981119792); (1.875 : 2.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DBLINQDataContext/QUESTION/QUESTION_QUIZ_QUESTION" />
+      <nodes>
+        <classShapeMoniker Id="f6bc74d3-9251-4990-934e-ae9e1abc36af" />
+        <classShapeMoniker Id="992ccff5-ad0c-4c32-bde1-2e8f6b8a8b45" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.875 : 4.25); (1.875 : 3.88550048828125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DBLINQDataContext/QUIZ/QUIZ_QUIZ_QUESTION" />
+      <nodes>
+        <classShapeMoniker Id="e52605b8-9090-4c77-846b-9a94a29b873f" />
+        <classShapeMoniker Id="992ccff5-ad0c-4c32-bde1-2e8f6b8a8b45" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="0988bce1-bd95-4ea8-a1fd-040cb976d5a6" absoluteBounds="3.5, 3.375, 2, 2.0822371419270831">
+      <DataClassMoniker Name="/DBLINQDataContext/QUIZ_USER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="81c3a271-966b-4dcd-a84d-d821b200a21f" absoluteBounds="3.515, 3.835, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.875 : 4.79807657877604); (3.5 : 4.79807657877604)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DBLINQDataContext/QUIZ/QUIZ_QUIZ_USER" />
+      <nodes>
+        <classShapeMoniker Id="e52605b8-9090-4c77-846b-9a94a29b873f" />
+        <classShapeMoniker Id="0988bce1-bd95-4ea8-a1fd-040cb976d5a6" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5f0b2da2-d871-4431-8665-2b9b59200fb7" absoluteBounds="3.5, 0.5, 2, 1.5891951497395831">
+      <DataClassMoniker Name="/DBLINQDataContext/USER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b2ab0922-995a-4618-8315-5234a4dd6b70" absoluteBounds="3.5149999999999997, 0.96, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.5 : 2.08919514973958); (4.5 : 3.375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DBLINQDataContext/USER/USER_QUIZ_USER" />
+      <nodes>
+        <classShapeMoniker Id="5f0b2da2-d871-4431-8665-2b9b59200fb7" />
+        <classShapeMoniker Id="0988bce1-bd95-4ea8-a1fd-040cb976d5a6" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
