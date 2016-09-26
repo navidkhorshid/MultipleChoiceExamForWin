@@ -68,8 +68,6 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.qUIZTableAdapter = new MultipleChoiceQuiz.QuizDBDataSetTableAdapters.QUIZTableAdapter();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.qUIZBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quizDBDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -458,36 +456,11 @@
             // 
             this.qUIZTableAdapter.ClearBeforeFill = true;
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(710, 9);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(40, 13);
-            this.linkLabel1.TabIndex = 6;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Logout";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(756, 9);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(24, 13);
-            this.linkLabel2.TabIndex = 7;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Exit";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
-            // 
             // Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(792, 573);
-            this.ControlBox = false;
-            this.Controls.Add(this.linkLabel2);
-            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -498,6 +471,7 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Student";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Student_FormClosed);
             this.Load += new System.EventHandler(this.Student_Load);
             ((System.ComponentModel.ISupportInitialize)(this.qUIZBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quizDBDataSet)).EndInit();
@@ -556,7 +530,5 @@
         private QuizDBDataSet quizDBDataSet;
         private System.Windows.Forms.BindingSource qUIZBindingSource;
         private QuizDBDataSetTableAdapters.QUIZTableAdapter qUIZTableAdapter;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }

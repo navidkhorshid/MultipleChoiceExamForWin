@@ -66,10 +66,8 @@ namespace MultipleChoiceQuiz
 
             MessageBox.Show("Your Score is : " + score.ToString(),"Well-done",MessageBoxButtons.OK);
             Student st = new Student();
-            this.Hide();
-            this.Close();
             st.ShowDialog();
-            
+            this.Close();
         }
 
         private void Student_Load(object sender, EventArgs e)
@@ -186,6 +184,11 @@ namespace MultipleChoiceQuiz
             {
                 MessageBox.Show(ex.Message);
             }
+            
+            
+                
+            
+
         }
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -333,16 +336,10 @@ namespace MultipleChoiceQuiz
             }
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void Student_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Hide(); this.Close();
             Login l = new Login();
             l.Show();
-        }
-
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

@@ -26,132 +26,90 @@ namespace MultipleChoiceQuiz
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try
-            {
-                var query = from p in db.QUESTIONs
-                            where p.Q_ID == (int)listBox1.SelectedValue
-                            select new
-                            {
-                                text = p.Q_TEXT,
-                                a = p.Q_A,
-                                b = p.Q_B,
-                                c = p.Q_C,
-                                d = p.Q_D,
-                                ca = p.Q_ANSWER
-                            };
+            var query = from p in db.QUESTIONs
+                        where p.Q_ID == (int)listBox1.SelectedValue
+                        select new
+                        {
+                            text = p.Q_TEXT,
+                            a  = p.Q_A,
+                            b = p.Q_B,
+                            c = p.Q_C,
+                            d = p.Q_D,
+                            ca = p.Q_ANSWER
+                        };
 
-                if (query.Count() > 0)
+            if (query.Count()>0)
+            {
+                textBox10.Text = query.First().text;
+                textBox9.Text = query.First().a;
+                textBox8.Text = query.First().b;
+                textBox7.Text = query.First().c;
+                textBox6.Text = query.First().d;
+                switch (query.First().ca)
                 {
-                    textBox10.Text = query.First().text;
-                    textBox9.Text = query.First().a;
-                    textBox8.Text = query.First().b;
-                    textBox7.Text = query.First().c;
-                    textBox6.Text = query.First().d;
-                    switch (query.First().ca)
-                    {
-                        case 1:
-                            radioButton8.Checked = true;
-                            break;
-                        case 2:
-                            radioButton7.Checked = true;
-                            break;
-                        case 3:
-                            radioButton6.Checked = true;
-                            break;
-                        case 4:
-                            radioButton5.Checked = true;
-                            break;
-                        default:
-                            {
-                                radioButton5.Checked = false;
-                                radioButton6.Checked = false;
-                                radioButton7.Checked = false;
-                                radioButton8.Checked = false;
-                            }
-                            break;
-                    }
+                    case 1:
+                        radioButton8.Checked = true;
+                        break;
+                    case 2:
+                        radioButton7.Checked = true;
+                        break;
+                    case 3:
+                        radioButton6.Checked = true;
+                        break;
+                    case 4:
+                        radioButton5.Checked = true;
+                        break;
+                    default: 
+                        {
+                            radioButton5.Checked = false;
+                            radioButton6.Checked = false;
+                            radioButton7.Checked = false;
+                            radioButton8.Checked = false;
+                        }
+                        break;
                 }
             }
-            catch (Exception)
-            {
-                MessageBox.Show("Select an item from the list...");
-            }
-            
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            try
-            {
-                listBox3.Items.Add(listBox2.SelectedValue);
-            }
-            catch (Exception)
-            {
-
-                MessageBox.Show("Select an item to add to quiz questions...");
-            }
-            
+            listBox3.Items.Add(listBox2.SelectedValue);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            try
-            {
-                listBox3.Items.Remove(listBox3.SelectedItem);
-            }
-            catch (Exception)
-            {
-
-                MessageBox.Show("Select an item to remove from the quiz questions...");
-            }
-            
+            listBox3.Items.Remove(listBox3.SelectedItem);
         }
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try
-            {
-                var query = from p in db.QUESTIONs
-                            where p.Q_ID == (int)listBox2.SelectedValue
-                            select new
-                            {
-                                text = p.Q_TEXT
-                            };
+            var query = from p in db.QUESTIONs
+                        where p.Q_ID == (int)listBox2.SelectedValue
+                        select new
+                        {
+                            text = p.Q_TEXT
+                        };
 
-                if (query.Count() > 0)
-                {
-                    textBox11.Text = query.First().text;
-                }
-            }
-            catch (Exception)
+            if (query.Count()>0)
             {
-                MessageBox.Show("Select an item from the list...");
+                textBox11.Text = query.First().text;
             }
-            
         }
 
         private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try
-            {
-                var query = from p in db.QUESTIONs
-                            where p.Q_ID == Convert.ToInt32(listBox3.SelectedItem)
-                            select new
-                            {
-                                text = p.Q_TEXT
-                            };
+            var query = from p in db.QUESTIONs
+                        where p.Q_ID == Convert.ToInt32(listBox3.SelectedItem)
+                        select new
+                        {
+                            text = p.Q_TEXT
+                        };
 
-                if (query.Count() > 0)
-                {
-                    textBox11.Text = query.First().text;
-                }
-            }
-            catch (Exception)
+            if (query.Count()>0)
             {
-                MessageBox.Show("Select an item from the list...");
+                textBox11.Text = query.First().text;
             }
-            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -180,7 +138,7 @@ namespace MultipleChoiceQuiz
             db.QUESTIONs.InsertOnSubmit(q);
             db.SubmitChanges();
             Administrator ad = new Administrator();
-            this.Hide(); this.Close();
+            this.Close();
             ad.ShowDialog();
             //db.Insert_Question(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, correct_answer);
 
@@ -207,7 +165,7 @@ namespace MultipleChoiceQuiz
 
             db.SubmitChanges();
             Administrator ad = new Administrator();
-            this.Hide(); this.Close();
+            this.Close();
             ad.ShowDialog();
         }
 
@@ -228,20 +186,14 @@ namespace MultipleChoiceQuiz
             }
             db.SubmitChanges();
             Administrator ad = new Administrator();
-            this.Hide(); this.Close();
+            this.Close();
             ad.ShowDialog();
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void Administrator_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Hide(); this.Close();
             Login l = new Login();
             l.Show();
-        }
-
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Application.Exit();
         }
 
        
